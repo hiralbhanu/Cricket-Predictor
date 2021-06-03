@@ -1,0 +1,112 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Cricket Match Predictor</title>
+
+    <!--bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="static/css/styles.css">
+    
+  </head>
+
+  <body style="font-size: 16px; color: #009688;">
+    <div>
+
+      <div class="container-fluid">
+          <h3 class="jumbotron" style="background: #009688;color:white;">Cricket Match Predictor</h3>
+        </div>
+
+      <main class="container">
+
+        <div class="row" id="overview">
+
+
+          <section>
+            <div class="col-sm-12">
+              
+                <center><h3 class="page-header">Predict the Chase</h3></center>
+                <form action="http://localhost:5000/predict">
+                  <div class="form-group">
+                    <label for="innings1_runs">Innings1 Runs</label> <br>
+                    <input class="form-control" type="text" name="innings1_runs" id="innings1_runs">
+                  </div>
+
+
+                  <div class="form-group">
+                    <label for="innings1_wickets">Innings1 Wickets</label> <br>
+                    <input class="form-control" type="text" name="innings1_wickets" id="innings1_wickets">
+                    <!--<div class="slidecontainer">
+                      <input type="range" name="age" min="18" max="100" value="30" class="slider" id="age">
+                      <p>age: <span id="demo"></span></p>
+                    </div>
+                    <script>
+                    var slider = document.getElementById("age");
+                    var output = document.getElementById("demo");
+                    output.innerHTML = slider.value;
+
+                    slider.oninput = function() {
+                      output.innerHTML = this.value;
+                    }
+                    </script>-->
+                  </div>
+                  <!--<div class="form-group">
+                    <label for="innings1_overs_batted">Innings1 Overs</label><br>
+                    <input class="form-control" type="text" name="innings1_overs_batted" id="innings1_overs_batted">
+                  </div>-->
+                  <!--<div class="form-group">
+                    <label for="DL_method">DL</label><br>
+                    <input class="form-control" type="text" name="DL_method" id="DL_method">
+                  </div>-->
+
+                  <div class="form-group">
+                    <label for="innings1_overs_batted">Innings1 Overs</label> <br>
+                    <div class="slidecontainer">
+                      <input type="range" name="innings1_overs_batted" min="1" max="20" value="10" class="slider" id="innings1_overs_batted">
+                      <p>Overs: <span id="demo"></span></p>
+                    </div>
+                    <script>
+                    var slider = document.getElementById("innings1_overs_batted");
+                    var output = document.getElementById("demo");
+                    output.innerHTML = slider.value;
+
+                    slider.oninput = function() {
+                      output.innerHTML = this.value;
+                    }
+                    </script>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Select Algorithm</label>
+                    <select name="algo" class="form-control" id="algo">
+                      <option value="randForest">Random Forest</option>
+                      <option value="naiveBayes">Naive Bayes</option>
+                      <option value="knn">K nearest Neighbours</option>
+                      <option value="decisionTree">Decision Tree</option>
+                    </select>
+                  </div>
+
+                  <button id="submit" class="btn" style="background: #009688;color: white;">Predict</button>
+                </form>
+
+             
+
+            </div>
+          </section>
+      </div> 
+      </main>
+    </div>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!--<script src="static/js/index.js"></script>
+  --></body>
+</html>
